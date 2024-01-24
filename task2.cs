@@ -41,3 +41,15 @@ bool AtGoal()
 }
 
 #endregion
+
+void Main()
+{
+    while (!AtGoal())
+    {
+        while (Peek())
+        {
+            Move();
+        }
+        Turn();
+    }
+}
