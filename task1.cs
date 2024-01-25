@@ -1,19 +1,3 @@
-// Your program should start at this line.
-/*
-Example:
-Move();
-Move();
-Move();
-Turn();
-Move();
-Move();
-Turn();
-Turn();
-Turn();
-Move();
-*/
-
-
 #region Basic functions
 // These functions are just here to make your intelisense work. 
 // They only have a conceptual function.
@@ -51,7 +35,6 @@ bool Visited()
 
 void Main()
 {
-
     while (!AtGoal())
     {
         while (Peek())
