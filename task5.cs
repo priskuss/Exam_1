@@ -4,13 +4,13 @@
 
 void TeleportToGoal()
 {
-    // Teleport the car directly to the goal position
+    // Teleport the car directly to the goal position.
     SetCarPosition(2, 15);
 }
 
-void SetCarPosition(2, 15)
+void SetCarPosition(int, int)
 {
-    // Sets the car's position to the specified coordinates
+    // Sets the car's position to the specified coordinates.
 }
 
 #endregion
