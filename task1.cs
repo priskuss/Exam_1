@@ -15,7 +15,7 @@ Move();
 
 
 #region Basic functions
-// These functions are just her to make your intelisense work. 
+// These functions are just here to make your intelisense work. 
 // They only have a conceptual function.
 
 void Move()
@@ -37,7 +37,28 @@ bool Peek()
 bool AtGoal()
 {
     // Returns true if the current cell is the goal cell.
-    return true; // just a placholder
+    return true; // just a placeholder
+}
+
+bool Visited()
+{
+    // Returns true if the current cell is visited, otherwise false.
+    // Keeps track of visited cells
+    return true; // just a placeholder
 }
 
 #endregion
+
+void Main()
+{
+
+    while (!AtGoal())
+    {
+        while (Peek())
+        {
+            Move();
+            Visited();
+        }
+        Turn();
+    }
+}
