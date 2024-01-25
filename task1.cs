@@ -21,14 +21,14 @@ bool Peek()
 bool AtGoal()
 {
     // Returns true if the current cell is the goal cell.
-    return true; // just a placeholder
+    return true; // just a placeholder.
 }
 
 bool Visited()
 {
     // Returns true if the current cell is visited, otherwise false.
     // Keeps track of visited cells
-    return true; // just a placeholder
+    return true; // just a placeholder.
 }
 #endregion
 
