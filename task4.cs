@@ -17,7 +17,7 @@ void Move()
     (int, int) = NextPosition();
     walkedCells.Add((int, int));
     // Moves the car 1 cell in the direction it is heading.
-    // Track the walked cells
+    // Track the walked cells.
 }
 bool Peek()
 {
