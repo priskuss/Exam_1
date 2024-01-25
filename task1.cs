@@ -30,7 +30,6 @@ bool Visited()
     // Keeps track of visited cells
     return true; // just a placeholder
 }
-
 #endregion
 
 void Main()
