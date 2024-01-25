@@ -1,19 +1,3 @@
-// Your program should start at this line.
-/*
-Example:
-Move();
-Move();
-Move();
-Turn();
-Move();
-Move();
-Turn();
-Turn();
-Turn();
-Move();
-*/
-
-
 #region Basic functions
 // These functions are just her to make your intelisense work. 
 // They only have a conceptual function.
@@ -37,7 +21,7 @@ bool Peek()
 bool AtGoal()
 {
     // Returns true if the current cell is the goal cell.
-    return true; // just a placholder
+    return true; // just a placeholder value.
 }
 
 #endregion
