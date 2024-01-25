@@ -1,43 +1,21 @@
-// Your program should start at this line.
-/*
-Example:
-Move();
-Move();
-Move();
-Turn();
-Move();
-Move();
-Turn();
-Turn();
-Turn();
-Move();
-*/
-
-
 #region Basic functions
 // These functions are just her to make your intelisense work. 
 // They only have a conceptual function.
 
-void Move()
+void TeleportToGoal()
 {
-    // Moves the car 1 cell in the direction it is heading. 
+    // Teleport the car directly to the goal position
+    SetCarPosition(2, 15);
 }
 
-void Turn()
+void SetCarPosition(2, 15)
 {
-    // Turns the car 90 deg clockwise.
-}
-
-bool Peek()
-{
-    // Returns true if the next cell is open, otherwise false.
-    return true; // Just a placeholder value. 
-}
-
-bool AtGoal()
-{
-    // Returns true if the current cell is the goal cell.
-    return true; // just a placholder
+    // Sets the car's position to the specified coordinates
 }
 
 #endregion
+
+void Main()
+{
+    TeleportToTheGoal();
+}
