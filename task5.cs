@@ -4,7 +4,7 @@
 
 void TeleportToGoal()
 {
-    // Teleport the car directly to the goal position.
+    // Teleport the car directly to the goal.
     SetCarPosition(2, 15);
 }
 
