@@ -11,11 +11,25 @@ void Turn()
 {
     // Turns the car 90 deg clockwise.
 }
+void Turns()
+{
+    Turn();
+    Turn();
+    Turn();
+}
 
 bool Peek()
 {
     // Returns true if the next cell is open, otherwise false.
     return true; // Just a placeholder value. 
+}
+
+void MoveUntilWall()
+{
+    while (Peek())
+    {
+        Move();
+    }
 }
 
 bool AtGoal()
@@ -24,23 +38,58 @@ bool AtGoal()
     return true; // just a placeholder.
 }
 
-bool Visited()
-{
-    // Returns true if the current cell is visited, otherwise false.
-    // Keeps track of visited cells
-    return true; // just a placeholder.
-}
 #endregion
 
 void Main()
 {
+    int peekCount = 0;
+
     while (!AtGoal())
     {
-        while (Peek())
+        MoveUntilWall();
+
+        peekCount++;
+
+        if (peekCount == 1 || peekCount == 2 || peekCount == 5 || peekCount == 6 || peekCount == 9 || peekCount == 10)
         {
-            Move();
-            Visited();
+            Turn();
         }
-        Turn();
+        else if (peekCount == 3 || peekCount == 4 || peekCount == 7 || peekCount == 8 || peekCount == 11 || peekCount == 12)
+        {
+            Turns();
+        }
     }
 }
+
+/*void Main()
+{
+    while (!AtGoal())
+    {
+        MoveUntilWall();
+        Turn();
+        MoveUntilWall();
+        Turn();
+        MoveUntilWall();
+        Turns(); 
+        MoveUntilWall();
+        Turns();
+        MoveUntilWall();
+        Turn();
+        MoveUntilWall();
+        Turn();
+        MoveUntilWall();
+        Turns();
+        MoveUntilWall();
+        Turns();
+        MoveUntilWall();
+        Turn();
+        MoveUntilWall();
+        Turn();
+        MoveUntilWall();
+        Turns();
+        MoveUntilWall();
+        Turns();
+        MoveUntilWall();
+
+    }
+}*/
