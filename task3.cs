@@ -4,17 +4,18 @@
 
 void Move()
 {
-    // Moves the car until the next cell is a wall.
+    // Moves the car 1 cell in the direction it is heading. 
 }
 
-void TurnRight()
+void Turn()
 {
     // Turns the car 90 deg clockwise.
 }
-
-void TurnLeft()
+void Turns()
 {
-    // Turns the car 90 deg counterclockwise.
+    Turn();
+    Turn();
+    Turn();
 }
 
 bool Peek()
@@ -23,33 +24,39 @@ bool Peek()
     return true; // Just a placeholder value. 
 }
 
+void MoveUntilWall()
+{
+    while (Peek())
+    {
+        Move();
+    }
+}
+
 bool AtGoal()
 {
     // Returns true if the current cell is the goal cell.
-    return true; // Just a placeholder value.
+    return true; // just a placeholder.
 }
 
-bool RightTurn()
-{
-    // Represents the direction of the next turn.
-    // Returns true if the next turn should be to the right, otherwise false.
-    return true; // Just a placeholder value. 
-}
 #endregion
 
 void Main()
 {
+    int peekCount = 0;
+
     while (!AtGoal())
     {
-        for (int i = 0; i < 2; i++)
-        {
-            if (RightTurn)
-                TurnRight();
-            else
-                TurnLeft();
+        MoveUntilWall();
 
-            Move();
+        peekCount++;
+
+        if (peekCount == 1 || peekCount == 2 || peekCount == 5 || peekCount == 6 || peekCount == 10 || peekCount == 11 || peekCount == 14 || peekCount == 15)
+        {
+            Turn();
         }
-        RightTurn = !RightTurn;
+        else if (peekCount == 3 || peekCount == 4 || peekCount == 7 || peekCount == 8 || peekCount == 9 || peekCount == 12 || peekCount == 13 || peekCount == 16)
+        {
+            Turns();
+        }
     }
 }
