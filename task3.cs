@@ -70,3 +70,24 @@ void Main()
         }
     }
 }
+
+/*void Main()
+{
+    int peekCount = 0;
+
+    while (!AtGoal())
+    {
+        MoveUntilWall();
+
+        peekCount++;
+
+        if (peekCount == 1 || peekCount == 2 || peekCount == 5 || peekCount == 6 || peekCount == 10 || peekCount == 11 || peekCount == 14 || peekCount == 15)
+        {
+            Turn();
+        }
+        else if (peekCount == 3 || peekCount == 4 || peekCount == 7 || peekCount == 8 || peekCount == 9 || peekCount == 12 || peekCount == 13 || peekCount == 16)
+        {
+            Turns();
+        }
+    }
+}*/
