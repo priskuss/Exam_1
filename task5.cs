@@ -61,21 +61,27 @@ void Main()
 }
 
 /*
-MoveUntilWall();
-Turn();
-MoveUntilWall();
-Turns();
-MoveUntilWall();
-Turn();
-MoveUntilWall();
-Turns();
-MoveUntilWall();
-Turn();
-MoveUntilWall();
-Turn();
-MoveUntilWall();
-Turn();
-MoveUntilWall();
-Turn();
-MoveUntilWall();
+void Main()
+{
+    while (!AtGoal())
+    {
+        MoveUntilWall();
+        Turn();
+        MoveUntilWall();
+        Turns();
+        MoveUntilWall();
+        Turn();
+        MoveUntilWall();
+        Turns();
+        MoveUntilWall();
+        Turn();
+        MoveUntilWall();
+        Turn();
+        MoveUntilWall();
+        Turn();
+        MoveUntilWall();
+        Turn();
+        MoveUntilWall();
+    }
+}
 */
