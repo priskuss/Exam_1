@@ -37,6 +37,7 @@ bool AtGoal()
     // Returns true if the current cell is the goal cell.
     return true; // just a placeholder.
 }
+
 bool CountTurn(int count)
 {
     return peekCount == 1 || peekCount == 2 || peekCount == 5 || peekCount == 6 || peekCount == 9 || peekCount == 10
