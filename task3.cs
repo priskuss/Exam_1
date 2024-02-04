@@ -11,6 +11,7 @@ void Turn()
 {
     // Turns the car 90 deg clockwise.
 }
+
 void Turns()
 {
     Turn();
@@ -38,21 +39,21 @@ bool AtGoal()
     return true; // just a placeholder.
 }
 
+bool CountTurn(int count)
+{
+    return count == 1 || count == 2 || count == 5 || count == 6 || count == 10 || count == 11 || count == 14 || count == 15;
+}
+
+bool CountTurns(int count)
+{
+    return count == 3 || count == 4 || count == 7 || count == 8 || count == 9 || count == 12 || count == 13 || count == 16;
+}
+
 #endregion
 
 void Main()
 {
     int peekCount = 0;
-
-    /*bool CountTurn(int count)
-    {
-        return count == 1 || count == 2 || count == 5 || count == 6 || count == 10 || count == 11 || count == 14 || count == 15;
-    }
-
-    bool CountTurns(int count)
-    {
-        return count == 3 || count == 4 || count == 7 || count == 8 || count == 9 || count == 12 || count == 13 || count == 16;
-    }*/
 
     while (!AtGoal())
     {
@@ -70,24 +71,3 @@ void Main()
         }
     }
 }
-
-/*void Main()
-{
-    int peekCount = 0;
-
-    while (!AtGoal())
-    {
-        MoveUntilWall();
-
-        peekCount++;
-
-        if (peekCount == 1 || peekCount == 2 || peekCount == 5 || peekCount == 6 || peekCount == 10 || peekCount == 11 || peekCount == 14 || peekCount == 15)
-        {
-            Turn();
-        }
-        else if (peekCount == 3 || peekCount == 4 || peekCount == 7 || peekCount == 8 || peekCount == 9 || peekCount == 12 || peekCount == 13 || peekCount == 16)
-        {
-            Turns();
-        }
-    }
-}*/
