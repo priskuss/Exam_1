@@ -37,7 +37,15 @@ bool AtGoal()
     // Returns true if the current cell is the goal cell.
     return true; // just a placeholder.
 }
+bool CountTurn(int count)
+{
+    return peekCount == 1 || peekCount == 2 || peekCount == 5 || peekCount == 6 || peekCount == 9 || peekCount == 10
+}
 
+bool CountTurns(int count)
+{
+    return peekCount == 3 || peekCount == 4 || peekCount == 7 || peekCount == 8 || peekCount == 11 || peekCount == 12
+}
 #endregion
 
 void Main()
@@ -50,46 +58,13 @@ void Main()
 
         peekCount++;
 
-        if (peekCount == 1 || peekCount == 2 || peekCount == 5 || peekCount == 6 || peekCount == 9 || peekCount == 10)
+        if (CountTurn(peekCount))
         {
             Turn();
         }
-        else if (peekCount == 3 || peekCount == 4 || peekCount == 7 || peekCount == 8 || peekCount == 11 || peekCount == 12)
+        else if (CountTurns(peekCount))
         {
             Turns();
         }
     }
 }
-
-/*void Main()
-{
-    while (!AtGoal())
-    {
-        MoveUntilWall();
-        Turn();
-        MoveUntilWall();
-        Turn();
-        MoveUntilWall();
-        Turns(); 
-        MoveUntilWall();
-        Turns();
-        MoveUntilWall();
-        Turn();
-        MoveUntilWall();
-        Turn();
-        MoveUntilWall();
-        Turns();
-        MoveUntilWall();
-        Turns();
-        MoveUntilWall();
-        Turn();
-        MoveUntilWall();
-        Turn();
-        MoveUntilWall();
-        Turns();
-        MoveUntilWall();
-        Turns();
-        MoveUntilWall();
-
-    }
-}*/
